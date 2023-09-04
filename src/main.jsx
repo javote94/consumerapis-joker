@@ -4,15 +4,27 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home.jsx';
 import Pokemons from './pages/Pokemons/Pokemons.jsx';
 import './main.css';
+import App from './App.jsx';
+import Game from './pages/Game/Game.jsx';
 
 const route = createBrowserRouter([
   {
     path : "/",
-    element : <Home />
-  },
-  {
-    path : "/pokemons",
-    element : <Pokemons />
+    element : <App />,
+    children : [
+      {
+        path : "/",
+        element : <Home />,
+      },
+      {
+        path : "/pokemons",
+        element : <Pokemons />,
+      },
+      {
+        path : "/game",
+        element : <Game />,
+      }
+    ]
   }
 ])
 

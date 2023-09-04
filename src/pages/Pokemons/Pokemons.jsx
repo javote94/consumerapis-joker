@@ -42,7 +42,7 @@ export default function Pokemons(){
             <div className="pokemons">
                 {
                     pokemons.map((pokemon) => (
-                        <Card pokemon={pokemon} key={pokemon.name} />
+                        <Card pokemon={pokemon} key={pokemon.name}/>
                     ))
                 }
             </div>
